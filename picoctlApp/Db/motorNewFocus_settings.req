@@ -1,0 +1,34 @@
+#file "motor_settings.req", P=ixsrd:,M=m9
+#file "motor_settings.req", P=ixsrd:,M=m10
+#file "motor_settings.req", P=ixsrd:,M=m11
+#file "motor_settings.req", P=ixsrd:,M=m12
+#file "motor_settings.req", P=ixsrd:,M=m13
+#file "motor_settings.req", P=ixsrd:,M=m14
+#file "motor_settings.req", P=ixsrd:,M=m15
+#file "motor_settings.req", P=ixsrd:,M=m16
+#file "motor_settings.req", P=ixsrd:,M=m17
+#file "motor_settings.req", P=ixsrd:,M=m18
+
+#file "motor_settings.req", P=ixsrd:,M=m41
+#file "motor_settings.req", P=ixsrd:,M=m42
+#file "motor_settings.req", P=ixsrd:,M=m43
+#file "motor_settings.req", P=ixsrd:,M=m44
+#file "motor_settings.req", P=ixsrd:,M=m45
+#file "motor_settings.req", P=ixsrd:,M=m46
+#file "motor_settings.req", P=ixsrd:,M=m47
+#file "motor_settings.req", P=ixsrd:,M=m48
+#file "motor_settings.req", P=ixsrd:,M=m49
+#file "motor_settings.req", P=ixsrd:,M=m50
+#file "motor_settings.req", P=ixsrd:,M=m51
+#file "motor_settings.req", P=ixsrd:,M=m52
+#file "motor_settings.req", P=ixsrd:,M=m53
+#file "motor_settings.req", P=ixsrd:,M=m54
+#file "motor_settings.req", P=ixsrd:,M=m55
+#file "motor_settings.req", P=ixsrd:,M=m56
+
+file "motor_settings.req", P="XF:10IDB-OP{Mono:HRM2-Pico:",M="m1}Mtr"
+file "motor_settings.req", P="XF:10IDB-OP{Mono:HRM2-Pico:",M="m2}Mtr"
+file "motor_settings.req", P="XF:10IDB-OP{Mono:HRM2-Pico:",M="m3}Mtr"
+file "motor_settings.req", P="XF:10IDB-OP{Mono:HRM2-Pico:",M="m4}Mtr"
+file "motor_settings.req", P="XF:10IDB-OP{Mono:HRM2-Pico:",M="m5}Mtr"
+file "motor_settings.req", P="XF:10IDB-OP{Mono:HRM2-Pico:",M="m6}Mtr"

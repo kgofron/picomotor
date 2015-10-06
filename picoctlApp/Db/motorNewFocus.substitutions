@@ -1,0 +1,110 @@
+file db/NewFocusMotor.db
+{
+## M-->axis instance (meaningless to hardware)
+## CH-->channel (axis) A,B,C of driver (8753 have 3,open-loop, 8751-CL have 1, closed-loop)
+## NOTE: CH is not used here, and may be safely omitted !!!
+## C-->controller instance
+## S-->axis instance (AKA: "drive instance"; used by device and driver support).
+#######################################################################
+## NOTE: at initialization, driver support will issue a "DRT" command to identify
+## the number and type of drives attached to it. The drives will be 8753 (3-axes each),
+## or 8751-CL (single, closed-loop axis). Hence, the controller will know what type and
+## how many axes are attached to it. Driver support then enumerates all attached axes, 
+## starting from 0 to N-1. This enumeration maps directly on to the "S" (slot) macro, below.
+## Obviously, the "C" macro maps onto the controller instance.
+ 
+## pattern
+## {P, 	M,   CH,  C, S, DESC, DTYP,EGU, DIR,VELO,VBAS,ACCL,BDST,BVEL,BACC, MRES, PREC, DHLM, DLLM, INIT}
+## {ixsrd:,m9,  A,  0,0,"ddz",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+## {ixsrd:,m10, B,  0,1,"ddthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+## {ixsrd:,m12, C,  0,2,"dwthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+## {ixsrd:,m13, A,  0,3,"dwchi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+## {ixsrd:,m14, B,  0,4,"udz",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+## {ixsrd:,m15, C,  0,5,"udthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+## {ixsrd:,m17, A,  0,6,"uwthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+## {ixsrd:,m18  B,  0,7,"uwchi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+## ### These are the 8751-CL drivers
+## {ixsrd:,m11, A,  0,9,"ddphi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+## {ixsrd:,m16, A,  0,10,"udphi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+
+## modified JK 2011.06.17
+# pattern
+# {P,  M,   CH,  C, S, DESC, DTYP,EGU, DIR,VELO,VBAS,ACCL,BDST,BVEL,BACC, MRES, PREC, DHLM, DLLM, INIT}
+# {ixsrd:,m9,  A,  0,0,"ddz",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+# {ixsrd:,m11, B,  0,1,"ddphi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+# {ixsrd:,m13, C,  0,2,"dwchi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+# {ixsrd:,m14, A,  0,3,"udz",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+# {ixsrd:,m16, B,  0,4,"udphi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+# {ixsrd:,m18  C,  0,5,"uwchi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+### These are the 8751-CL drivers
+# {ixsrd:,m10, A,  0,6,"ddthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+# {ixsrd:,m12, A,  0,7,"dwthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+# {ixsrd:,m15, A,  0,8,"udthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+# {ixsrd:,m17, A,  0,9,"uwthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+# }
+
+## modified KG 2011.09.2
+#pattern
+#{P,  M,   CH,  C, S, DESC, DTYP,EGU, DIR,VELO,VBAS,ACCL,BDST,BVEL,BACC, MRES, PREC, DHLM, DLLM, INIT}
+#{ixsrd:,m41,  A,  0,0,"ddz",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m43, B,  0,1,"ddphi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m45, C,  0,2,"dwchi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m46, A,  0,3,"udz",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m48, B,  0,4,"udphi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m50  C,  0,5,"uwchi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+### These are the 8751-CL drivers
+#{ixsrd:,m42, A,  0,6,"ddthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m44, A,  0,7,"dwthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m47, A,  0,8,"udthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m49, A,  0,9,"uwthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+### These are additional motors (no hardware connected: must be configured later)
+#{ixsrd:,m51, A,  0,10,"p1",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m52, A,  0,11,"p2",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m53, A,  0,12,"p3",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m54, A,  0,13,"p4",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m55, A,  0,14,"p5",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m56, A,  0,15,"p6",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+
+## modified KG 2011.09.13
+#pattern
+#{P,  M,   CH,  C, S, DESC, DTYP,EGU, DIR,VELO,VBAS,ACCL,BDST,BVEL,BACC, MRES, PREC, DHLM, DLLM, INIT}
+#{ixsrd:,m41, A,  0,0,"ddz",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m42, B,  0,1,"dwthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m43, C,  0,2,"dwchi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m44, A,  0,3,"udz",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m45, B,  0,4,"uwthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m46  C,  0,5,"uwchi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m47, A,  0,6,"a1the",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m48, B,  0,7,"a1chi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m49, C,  0,8,"pd1",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m50, A,  0,9,"a2the",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m51, B,  0,10,"a2chi", PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m52  C,  0,11,"p2d",   PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+### These are the 8751-CL drivers
+#{ixsrd:,m53, A,  0,12,"ddthe", PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m54, A,  0,13,"ddphi", PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m55, A,  0,14,"udthe", PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixsrd:,m56, A,  0,15,"udphi", PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#}
+
+## modified KG 2015.06.17
+#pattern
+#{P,  M,   CH,  C, S, DESC, DTYP,EGU, DIR,VELO,VBAS,ACCL,BDST,BVEL,BACC, MRES, PREC, DHLM, DLLM, INIT}
+#{ixshrm:,m1, A,  0,0,"ddz",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixshrm:,m2, B,  0,1,"dwthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixshrm:,m3, C,  0,2,"dwchi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixshrm:,m4, A,  0,3,"udz",    PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixshrm:,m5, B,  0,4,"uwthe",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#{ixshrm:,m6  C,  0,5,"uwchi",  PMNC87xx,mm,Pos,500,500,1,1,500,1,1,1,1,1,""}
+#}
+
+## modified KG 2015.08.19
+pattern
+{P,  M,   CH,  C, S, DESC, DTYP,EGU, DIR,VELO,VBAS,ACCL,BDST,BVEL,BACC, MRES, PREC, DHLM, DLLM, INIT, ALIAS}
+{"XF:10IDB-OP{Mono:HRM2-Pico:","m1}Mtr", A,  0,0,"hrm2-p1",  PMNC87xx,"ct",Pos,0.05,0.05,1,0,0.05,1,0.0001,5,0,0,"",    "hrm2-p1"}
+{"XF:10IDB-OP{Mono:HRM2-Pico:","m2}Mtr", B,  0,1,"hrm2-p2",  PMNC87xx,"ct",Pos,0.05,0.05,1,0,0.05,1,0.0001,5,0,0,"",    "hrm2-p2"}
+{"XF:10IDB-OP{Mono:HRM2-Pico:","m3}Mtr", C,  0,2,"hrm2-p3",  PMNC87xx,"ct",Pos,0.05,0.05,1,0,0.05,1,0.0001,5,0,0,"",    "hrm2-p3"}
+{"XF:10IDB-OP{Mono:HRM2-Pico:","m4}Mtr", A,  0,3,"hrm2-p4",  PMNC87xx,"ct",Pos,0.05,0.05,1,0,0.05,1,0.0001,5,0,0,"",    "hrm2-p4"}
+{"XF:10IDB-OP{Mono:HRM2-Pico:","m5}Mtr", B,  0,4,"hrm2-p5",  PMNC87xx,"ct",Pos,0.05,0.05,1,0,0.05,1,0.0001,5,0,0,"",    "hrm2-p5"}
+{"XF:10IDB-OP{Mono:HRM2-Pico:","m6}Mtr", C,  0,5,"hrm2-bs",  PMNC87xx,"ct",Pos,0.04,0.04,1,0,0.04,1,0.00008,5,0,0,"",   "hrm2-bs"}
+}

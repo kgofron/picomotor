@@ -1,0 +1,11 @@
+NAME=pico93
+PORT=4403
+HOST=
+USER=softioc
+HOST=xf10idb-ioc1
+
+#CHDIR=$CHDIR/iocBoot/iocpicoctl
+#EXEC='../../bin/linux-x86-debug/picoctl st.cmd'
+
+#export LD_LIBRARY_PATH=/usr/lib/epics/lib/linux-x86-debug
+#EXEC='/usr/bin/gdbserver localhost:9998 ../../bin/linux-x86-debug/picoctl st.cmd'

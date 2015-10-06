@@ -1,0 +1,127 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 118
+y 629
+w 500
+h 300
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-18.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+endScreenProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 16
+y 16
+w 68
+h 23
+fgColor index 14
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 14
+font "helvetica-medium-r-18.0"
+buttonLabel "Scaler"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "scaler16_full_calc.edl"
+}
+symbols {
+  0 "S=scaler1"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 99
+y 16
+w 68
+h 23
+fgColor index 14
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 14
+font "helvetica-medium-r-18.0"
+buttonLabel "Axis1"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "motorx_all.edl"
+}
+symbols {
+  0 "M=m1"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 17
+y 45
+w 68
+h 33
+fgColor index 14
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 14
+font "helvetica-medium-r-18.0"
+buttonLabel "DAC"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "pas9819.edl"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 2
+release 0
+x 14
+y 256
+w 135
+h 32
+fgColor index 14
+bgColor index 0
+topShadowColor index 0
+botShadowColor index 14
+font "helvetica-medium-r-18.0"
+buttonLabel "Crate Monitor"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "SysMonitor.edl"
+}
+symbols {
+  0 "P=crate:mad"
+}
+replaceSymbols {
+  0 1
+}
+endObjectProperties
+

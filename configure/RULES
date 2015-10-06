@@ -1,0 +1,16 @@
+# RULES
+
+include $(CONFIG)/RULES
+
+# Library should be rebuilt because LIBOBJS may have changed.
+$(LIBNAME): ../Makefile
+
+REQ_FILES = $(REQ:%=$(INSTALL_LOCATION)/as/req/%)
+
+$(REQ_FILES) : \
+$(INSTALL_LOCATION)/as/req/%.req: ../%.req
+	@[ -d $(dir $@) ] || install -d $(dir $@)
+	@echo "Install REQ $@"
+	install -m 644 $< $@
+
+build: $(REQ_FILES)
