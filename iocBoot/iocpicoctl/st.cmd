@@ -4,6 +4,7 @@
 ## everywhere it appears in this file
 
 < envPaths
+< /epics/common/xf10idb-ioc1-netsetup.cmd
 
 epicsEnvSet("ENGINEER",  "kgofron x5283")
 epicsEnvSet("LOCATION",  "740 IXS RG:B1")
@@ -14,8 +15,6 @@ epicsEnvSet("CT",   "XF:10IDB-CT")
 epicsEnvSet("IOC_PREFIX", "$(CT){IOC-$(MC)}")
 epicsEnvSet("MC_PREFIX", "$(CT){$(MC)}")
 
-epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
-epicsEnvSet("EPICS_CA_ADDR_LIST", "10.10.0.255")
 
 cd ${TOP}
 
@@ -25,7 +24,7 @@ picoctl_registerRecordDeviceDriver pdbbase
 
 # Setup IP port for 8752 
 #drvAsynIPPortConfigure("$(NP_PORT)", "pico:23")
-drvAsynIPPortConfigure("$(NP_PORT)", "10.10.2.93:23")
+drvAsynIPPortConfigure("$(NP_PORT)", "xf10id-pico1.nsls2.bnl.local:23")
 asynOctetSetInputEos("$(NP_PORT)",0,">")
 asynOctetSetOutputEos("$(NP_PORT)",0,"\r")
 asynOctetConnect("$(NP_PORT)", "$(NP_PORT)")

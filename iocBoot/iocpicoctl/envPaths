@@ -1,4 +1,3 @@
-epicsEnvSet("ARCH","linux-x86_64")
 epicsEnvSet("IOC","iocpicoctl")
 epicsEnvSet("TOP","/epics/iocs/pico93")
 epicsEnvSet("EPICS_BASE","/usr/lib/epics")

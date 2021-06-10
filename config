@@ -2,7 +2,7 @@ NAME=pico93
 PORT=4403
 HOST=
 USER=softioc
-HOST=xf10idb-ioc1
+HOST=xf10idd-ioc3
 
 #CHDIR=$CHDIR/iocBoot/iocpicoctl
 #EXEC='../../bin/linux-x86-debug/picoctl st.cmd'
